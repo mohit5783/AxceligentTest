@@ -1,0 +1,7 @@
+C:\Mohit\AxceligentTest\AxceligentTest\bin\Debug\AxceligentTest.exe.config
+C:\Mohit\AxceligentTest\AxceligentTest\bin\Debug\AxceligentTest.exe
+C:\Mohit\AxceligentTest\AxceligentTest\bin\Debug\AxceligentTest.pdb
+C:\Mohit\AxceligentTest\AxceligentTest\obj\Debug\AxceligentTest.csprojResolveAssemblyReference.cache
+C:\Mohit\AxceligentTest\AxceligentTest\obj\Debug\AxceligentTest.csproj.CoreCompileInputs.cache
+C:\Mohit\AxceligentTest\AxceligentTest\obj\Debug\AxceligentTest.exe
+C:\Mohit\AxceligentTest\AxceligentTest\obj\Debug\AxceligentTest.pdb
