@@ -101,15 +101,23 @@ namespace AxceligentTest
     {
         public int Challenge(int[] input)
         {
-            int result = 0;
-            var DuplicateValues = input.GroupBy(v => v).Where(cnt => cnt.Count() > 1).Select(s => s.Key);
-            if (DuplicateValues.Count() >= 1)
+            //Groupby Order by Count Desc
+            var grpBy = input.GroupBy(v => v).OrderByDescending(x => x.Count());
+            //Find M 
+            var M = grpBy.FirstOrDefault();
+            //Removing the elements from the array which is repeated less than M-1 
+            foreach (var gb in grpBy)
+                if (gb.Count() < (M.Count() - 1))
+                    input = input.Where(x => x != gb.Key).ToArray();
+            //Finding the Sum of Biggest Neighbor 
+            int BigNeighbor = 0;
+            for (int i = 0; i < input.Length - 1; i++)
             {
-                var LargestValue = DuplicateValues.Max();
-                int indx = Array.IndexOf(input, LargestValue);
-                result = input[indx] + input[indx + 1];
+                if (BigNeighbor < input[i] + input[i + 1])
+                    BigNeighbor = input[i] + input[i + 1];
             }
-            return result;
+            Console.WriteLine("Yes, The Solution Complexity is O(n)");
+            return BigNeighbor;
         }
     }
 }
